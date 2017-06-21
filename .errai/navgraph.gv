@@ -1,0 +1,10 @@
+digraph Navigation {
+"MainPage" [penwidth=3]
+"OauthCallbackPage"
+"OauthCallbackPage" -> "MainPage" [label="transitionToMainPage"]
+"FindPage"
+"FindPage" -> "FieldPage" [label="fieldClicked"]
+"FindPage" -> "ProfilePage" [label="profileClicked"]
+"ProfilePage"
+"FieldPage"
+}

@@ -1,0 +1,2 @@
+serviceClass: com.shotechnology.base.gwterraigae.client.services.GameService
+path: 165A896C1378ED71670D44460C3E651E.gwt.rpc
