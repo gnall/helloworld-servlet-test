@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import org.jboss.errai.common.client.logging.util.Console;
 import org.jboss.errai.ui.nav.client.local.TransitionTo;
 import org.jboss.errai.ui.shared.api.annotations.DataField;
 import org.jboss.errai.ui.shared.api.annotations.Templated;
@@ -105,6 +106,7 @@ public class FindPage extends Page
 			@Override
 			public void e(String arg) {
 				GWT.log("Got the Token: " + arg);
+				consoleLog("Got the Token: " + arg);
 			}
 			
 		};
@@ -143,4 +145,8 @@ public class FindPage extends Page
 		
     	messaging.requestPermission().then(onResolve,onError);
     }
+    
+    public native static void consoleLog(String message) /*-{
+		console.log(message);
+	}-*/;
 }
