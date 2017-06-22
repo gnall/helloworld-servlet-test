@@ -126,6 +126,7 @@ public class FindPage extends Page
 			@Override
 			public void e(Void arg) {
 				GWT.log("success RequestFirebaseNotifications");
+				consoleLog("success RequestFirebaseNotifications");
 				messaging.getToken().then(getTokenResolve,getTokenError);
 			}
 			
@@ -137,7 +138,7 @@ public class FindPage extends Page
 
 			@Override
 			public void e(Error error) {
-				GWT.log("failed RequestFirebaseNotifications");
+				consoleLog("failed RequestFirebaseNotifications");
 				GWT.log(error.getMessage());
 			}
 		};
