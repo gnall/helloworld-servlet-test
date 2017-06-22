@@ -5,7 +5,6 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import org.jboss.errai.common.client.logging.util.Console;
 import org.jboss.errai.ui.nav.client.local.TransitionTo;
 import org.jboss.errai.ui.shared.api.annotations.DataField;
 import org.jboss.errai.ui.shared.api.annotations.Templated;
@@ -20,7 +19,6 @@ import com.google.gwt.user.client.Event;
 import com.google.gwt.user.client.EventListener;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.shotechnology.base.gwterraigae.client.firebase.FirebaseImpl;
 import com.shotechnology.base.gwterraigae.client.firebase.Fn.Arg;
@@ -106,7 +104,7 @@ public class FindPage extends Page
 			@Override
 			public void e(String arg) {
 				GWT.log("Got the Token: " + arg);
-				consoleLog("Got the Token: " + arg);
+				consoleLog("Got the token: " + arg);
 			}
 			
 		};
@@ -118,6 +116,7 @@ public class FindPage extends Page
 			public void e(Error error) {
 				GWT.log("failed RequestFirebaseNotifications");
 				GWT.log(error.getMessage());
+				consoleLog("Error getting the token: " + error);
 			}
 		};
 		
